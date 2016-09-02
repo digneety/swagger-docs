@@ -222,7 +222,7 @@ module Swagger
           base_path = trim_trailing_slash(config[:base_path]) || DEFAULT_CONFIG[:base_path]
           controller_base_path = trim_leading_slash(config[:controller_base_path] || "")
           base_path += "/#{controller_base_path}" unless controller_base_path.empty?
-          api_file_path = config[:api_file_path]
+          api_file_path = config[:api_file_path] || DEFAULT_CONFIG[:api_file_path]
           authorizations = config[:authorizations]
           settings = {
             base_path: base_path,
